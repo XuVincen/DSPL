@@ -1,0 +1,18 @@
+# DSPL core dependencies.
+# torch / torch_geometric must be installed with versions matched to your CUDA driver;
+# adjust the index-url accordingly (see README).
+torch>=2.0
+# torchvision (optional, transitive with torch wheel)
+# torch_geometric — install with the torch-matching PyG wheel:
+torch_geometric>=2.3
+# Training stack
+pytorch-lightning>=2.0
+tensorboard
+# Scientific / data
+numpy
+scipy
+scikit-learn
+h5py
+
+# Optional: YAML config files (--config). Not needed for pure-CLI usage.
+pyyaml
