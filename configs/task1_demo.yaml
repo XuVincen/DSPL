@@ -1,0 +1,22 @@
+# DSPL — Task 1 quick demo (1000 proteins, a few epochs, online state discovery).
+#
+# Fast smoke-test that runs without precomputing state_corr first.
+# Usage:
+#   python dspl/phase2_crossmodal/train_ablation.py --config configs/task1_demo.yaml
+
+architecture: egnn
+ablation: full
+n_prototypes: 5
+lambda_align: 0.1
+cross_attn_layers: 3
+
+n_proteins: 1000
+epochs: 5
+lr: 0.0001
+seed: 42
+num_workers: 0
+gpu_id: 0
+split: adaptability
+
+# null -> online PCA + k-means per forward pass
+dspl_state_file: null
